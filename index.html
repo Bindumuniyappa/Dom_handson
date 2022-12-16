@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>1.Write the code to access element which is having id as "text"</h2>
+    <div id="text">hi,welcome to prepbytes</div>
+    <pre style="color: blue">
+Code: 
+let textElement=document.getElementById("text")
+console.log(textElement.innerText)</pre
+    >
+    <h2>2.Write the code to access element which is having tag as "h1"</h2>
+    <h1>hello world,have a good day</h1>
+    <pre style="color: blue">
+code:
+let headingElement=document.getElementsByTagName("h1")
+console.log(headingElement[0].innertext)</pre
+    >
+    <h2>3.Write the code to access element which is having class as "box"</h2>
+    <div class="box">hi,Do good Be good</div>
+    <pre style="color: blue">
+let textElement1=document.getElementsByClassName("box");
+console.log(textElement1[0].innerText);</pre
+    >
+    <h2>
+      4." &lth1&gtHello&lt/h1&gt Change the heading from ""Hello"" to ""Hello
+      World"" using DOM functions"
+    </h2>
+    <h1 id="hello">hello</h1>
+    <pre style="color: blue">
+let helloElement=document.getElementById("hello");
+console.log(helloElement.innerText="hello world")</pre
+    >
+    <h2>
+      5.Create three cards on HTML page and arrange them using flex property in
+      row or horizontal direction and also create button at the bottom named
+      "Change Flex direction". When user clicks on this button, the cards
+      arrangement should be changed to vertical direction.
+    </h2>
+    <div id="flex-box">
+      <div class="boxes">1</div>
+      <div class="boxes">2</div>
+      <div class="boxes">3</div>
+    </div>
+    <button id="Flex-function">change flex direction</button>
+    <h2>6.What’s the difference between window vs document?</h2>
+    <p>
+      Window object : It is the top most object and outermost element of the
+      object hierarchy .The window object represents a window/tab containing a
+      DOM document
+    </p>
+    <p>
+      Document object : Each HTML document that gets loaded into a window
+      becomes a document object. The document contains the contents of the page.
+      Using document object, JavaScript can modify, add and delete the HTML
+      elements, attributes CSS styles in the page.document object is property of
+      window object that points to the DOM document loaded in that window.
+    </p>
+    <h2>
+      7." &lth1&gtHello&lt/h1&gt Add one style attribute and give text color as
+      red and id attribute and give the id value as ""heading"" in the above
+      given h1 tag using DOM functions"
+    </h2>
+    <h1 id="heading" style="color: red">Hello</h1>
+    <h2>
+      8.Create an HTML page having content as Hello world and a button named
+      Replace Text. When user will click on this button page content should be
+      changed to "Welcome to Elevation academy"
+    </h2>
+    <span id="textbtn"> Hello World!!</span>
+    <button id="btn-btn">Replace text</button>
+    <pre style="color: blue">
+let text1=document.getElementById("textbtn");
+let btn1=document.getElementById("btn-btn");
+btn1.addEventListener("click",function(){
+    text1.innerText="Welcome to Elevation academy";
+})</pre
+    >
+    <h2>
+      9.Write code to implement timer clock using JS -- display HH:MM:SS -- the
+      time should keep updating every second
+    </h2>
+    <div id="clock">
+      <p id="hrs"></p>
+      <p id="mins"></p>
+      <p id="sec"></p>
+    </div>
+    <button id="btn">start clock</button>
+    <h2>
+      10.Create a select drop down for selecting Year 20-21, 21-22 etc. Print
+      the item text selected
+    </h2>
+
+    <select name="Year" id="selectedText">
+      <option value="one" name="one">20-21</option>
+      <option value="two" name="two">21-22</option>
+      <option value="three" name="three">22-23</option>
+      <option value="four" name="four">23-24</option>
+    </select>
+    <input type="submit" id="input-select" />
+
+    <script src="script.js"></script>
+  </body>
+</html>
