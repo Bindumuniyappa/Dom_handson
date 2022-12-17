@@ -47,10 +47,7 @@ function timer(){
     })
 
 let textSelection=document.getElementById("selectedText");
-let btnElement=document.getElementById("input-select");
-btnElement.addEventListener("click",function(){
-    let value=selectedIndex.value;
-    // let element=document.createElement("text");
-    // element.innerText=value;
-    
+let valueElement=document.getElementById("value");
+textSelection.addEventListener("click",function(){
+     value.innerText=textSelection.options[textSelection.selectedIndex].text;
 })
