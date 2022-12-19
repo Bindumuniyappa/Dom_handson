@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1 style="color: red">DOM Assignment</h1>
     <h2>1.Write the code to access element which is having id as "text"</h2>
     <div id="text">hi,welcome to prepbytes</div>
     <pre style="color: blue">
@@ -49,6 +50,13 @@ console.log(helloElement.innerText="hello world")</pre
       <div class="boxes">3</div>
     </div>
     <button id="Flex-function">change flex direction</button>
+    <pre style="color: blue">
+let flexButton=document.getElementById("Flex-function");
+let flexBoxes=document.getElementById("flex-box")
+flexButton.addEventListener("click",function(){
+    flexBoxes.style.flexDirection="column";
+})</pre
+    >
     <h2>6.What’s the difference between window vs document?</h2>
     <p>
       Window object : It is the top most object and outermost element of the
@@ -92,6 +100,26 @@ btn1.addEventListener("click",function(){
       <p id="sec"></p>
     </div>
     <button id="btn">start clock</button>
+    <pre style="color: blue">
+function timer(){
+    let x=document.getElementById("clock") 
+    let btn=document.getElementById("time")
+    let times=new Date()
+    let hr=times.getHours();
+    let min=times.getMinutes();
+    let secs=times.getSeconds();
+    document.getElementById("clock").innerText=hr+":"+min+":"+secs;
+    
+    }
+    btn.addEventListener("click",function(){
+        btn.innerText=timer()
+        setInterval(function(){
+            btn.innerText=timer()
+
+        },1000)
+
+    })</pre
+    >
     <h2>
       10.Create a select drop down for selecting Year 20-21, 21-22 etc. Print
       the item text selected
@@ -104,6 +132,13 @@ btn1.addEventListener("click",function(){
       <option value="four" name="four">23-24</option>
     </select>
     <h2 id="value">value</h2>
+    <pre style="color: blue">
+let textSelection=document.getElementById("selectedText");
+let valueElement=document.getElementById("value");
+textSelection.addEventListener("click",function(){
+     value.innerText=textSelection.options[textSelection.selectedIndex].text;
+})</pre
+    >
 
     <script src="script.js"></script>
   </body>
